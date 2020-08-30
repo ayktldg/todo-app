@@ -1,0 +1,8 @@
+export const STATUSSES = {
+  ALL: { VALUE: 0, TEXT: "ALL" },
+  WAITING: { VALUE: 1, TEXT: "WAITING" },
+  IN_PROGRESS: { VALUE: 2, TEXT: "IN PROGRESS" },
+  COMPLETED: { VALUE: 3, TEXT: "COMPLETED" },
+};
+
+export default STATUSSES;
