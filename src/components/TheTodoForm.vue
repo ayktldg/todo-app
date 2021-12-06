@@ -1,7 +1,7 @@
 <template>
   <ValidationObserver v-slot="{ handleSubmit }">
     <form @submit.prevent="handleSubmit(onSubmit)">
-      <div class="row mt-4 justify-content-center">
+      <div class="row m-4 justify-content-center">
         <div class="col-sm-6">
           <div class="form-group">
             <label>Title</label>
