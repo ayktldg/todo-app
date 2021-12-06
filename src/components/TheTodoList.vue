@@ -8,7 +8,8 @@
             <option
               :value="STATUSSES[status].VALUE"
               :key="STATUSSES[status].VALUE"
-            >{{ STATUSSES[status].TEXT }}</option>
+              >{{ STATUSSES[status].TEXT }}</option
+            >
           </template>
         </select>
       </label>
@@ -21,12 +22,13 @@
               <h5>{{ todo.title }}</h5>
               <router-link
                 :to="{
-                name: 'UpdateTodoForm',
-                params: { todo: todo, id: todo.id },
-              }"
+                  name: 'UpdateTodoForm',
+                  params: { todo: todo, id: todo.id },
+                }"
                 tag="button"
                 class="btn btn-sm text-dark btn-light ml-auto"
-              >Edit</router-link>
+                >Edit</router-link
+              >
             </div>
             <div class="card-body">
               <p class="card-text">{{ todo.description }}</p>
@@ -38,7 +40,8 @@
     <template v-else>
       <h4 class="text-center">
         There are no elements in the list. Go to form for adding new one or
-        <router-link tag="a" to="/add-new" class="text-info">click</router-link> here.
+        <router-link tag="a" to="/add-new" class="text-info">click</router-link>
+        here.
       </h4>
     </template>
   </div>

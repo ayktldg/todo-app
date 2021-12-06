@@ -5,7 +5,12 @@
         <div class="col-sm-6">
           <div class="form-group">
             <label>Title</label>
-            <ValidationProvider name="title" mode="passive" rules="required" v-slot="{ errors }">
+            <ValidationProvider
+              name="title"
+              mode="passive"
+              rules="required"
+              v-slot="{ errors }"
+            >
               <input
                 type="text"
                 class="form-control form-control-sm"
@@ -34,13 +39,23 @@
           </div>
           <div class="form-group">
             <label>Status</label>
-            <ValidationProvider name="status" mode="passive" rules="required" v-slot="{ errors }">
-              <select class="form-control form-control-sm" name="status" v-model="todoForm.status">
+            <ValidationProvider
+              name="status"
+              mode="passive"
+              rules="required"
+              v-slot="{ errors }"
+            >
+              <select
+                class="form-control form-control-sm"
+                name="status"
+                v-model="todoForm.status"
+              >
                 <template v-for="status in Object.keys(STATUSSES)">
                   <option
                     :value="STATUSSES[status].VALUE"
                     :key="STATUSSES[status].VALUE"
-                  >{{ STATUSSES[status].TEXT }}</option>
+                    >{{ STATUSSES[status].TEXT }}</option
+                  >
                 </template>
               </select>
               <span class="text-danger">{{ errors[0] }}</span>
@@ -49,8 +64,10 @@
           <button
             type="submit"
             class="btn btn-sm col"
-            :class="isUpdate ? 'bg-warning' : 'bg-secondary'"
-          >{{ isUpdate ? "Update" : "Add New" }}</button>
+            :class="isUpdate ? 'bg-warning' : 'bg-secondary text-light'"
+          >
+            {{ isUpdate ? "Update" : "Add New" }}
+          </button>
         </div>
       </div>
     </form>
